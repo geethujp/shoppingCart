@@ -17,6 +17,9 @@
 .settings/
 *.sublime-workspace
 
+# Angular cli 
+.angular-cli.json
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
