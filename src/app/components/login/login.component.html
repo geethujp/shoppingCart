@@ -17,9 +17,10 @@
                   required 
                   ng-cut="$event.preventDefault()" 
                   ng-copy="$event.preventDefault()" 
-                  ng-paste="$event.preventDefault()">
+                  ng-paste="$event.preventDefault()"
+                  >
         </div>
-                
+        <p *ngIf="errors.email" class="alert alert-danger">{{errors.email}}</p>  
         <div class='element-group'>
           <label for='password'>Password</label>
           <input  type='password' 
@@ -33,11 +34,10 @@
                   ng-copy="$event.preventDefault()" 
                   ng-paste="$event.preventDefault()">
         </div>
+        <p *ngIf="errors.password" class="alert alert-danger">{{errors.password}}</p>
         <p *ngIf="errors.invalid" class="alert alert-danger">{{errors.invalid}}</p>
         <div class="row text-center">
-          <button type="submit" 
-                  class="btn btn-success" 
-                 [disabled]="!loginForm.form.valid">Login</button>
+        <button type="submit" class="btn btn-success">Login</button>
         </div>
       </form>
     </div>

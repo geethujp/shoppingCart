@@ -25,7 +25,7 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    debugger
+
     this.firebaseAuth
       .auth
       .signInWithEmailAndPassword(email, password)
